@@ -1,0 +1,424 @@
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url("#{$img-path}map_bg@2x.jpg") 50% 50% no-repeat;
+  background-size: cover;
+
+  .content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  @media screen and (orientation: portrait) {
+    padding: 5%;
+    background: url("#{$img-path}map_bg_mb@2x.jpg") 50% 50% no-repeat;
+    background-size: cover;
+  }
+}
+
+.logo {
+  position: absolute;
+  left: -3%;
+  top: 1%;
+  width: 21.219%;
+  background: url("#{$img-path}logo@2x.png") 50% 50% no-repeat;
+  background-size: contain;
+  z-index: 5;
+  @include alpha(0);
+  transform: translateY(-30px);
+  animation: move-down 0.5s forwards ease-in-out, alpha-1 0.5s forwards ease-in-out;
+
+  .view {
+    display: block;
+    padding-top: 24.161%;
+  }
+
+  @media screen and (orientation: portrait) {
+    top: 50%;
+    left: 50%;
+    margin: -85% 0 0 38%;
+    width: 8.973%;
+    background: url("#{$img-path}logo_mb@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+
+    .view {
+      padding-top: 413.8888%;
+    }
+  }
+}
+
+.map-logo {
+  position: absolute;
+  left: -3%;
+  bottom: 0;
+  width: 36%;
+  background: url("#{$img-path}map_logo@2x.png") 50% 50% no-repeat;
+  background-size: contain;
+  @include alpha(0);
+  transform: translateY(30px);
+  animation: move-up 0.5s forwards ease-in-out, alpha-1 0.5s forwards ease-in-out;
+  z-index: 1;
+
+  .view {
+    padding-top: 58.46519%;
+  }
+
+  @media screen and (orientation: portrait) {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    margin: -85% 0 0 -47%;
+    width: 28%;
+    background: url("#{$img-path}map_logo_mb@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+
+    .view {
+      padding-top: 171%;
+    }
+  }
+}
+
+.building-bg {
+  max-width: 89.7vw;
+  width: calc(100vh / 0.57);
+  height: 100%;
+  background: url("#{$img-path}building_bg@2x.png") 50% 50% no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  @include alpha(0);
+  animation: alpha-1 0.5s 0.7s forwards ease-in-out;
+
+  >.view {
+    background: url("#{$img-path}building@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    @include alpha(0);
+    transform: translateY(30px);
+    animation: move-up 0.5s 1s forwards ease-in-out, alpha-1 0.5s 1s forwards ease-in-out;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: calc(100vh / 1.75);
+    background: url("#{$img-path}building_bg_mb@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+
+    >.view {
+      background: url("#{$img-path}building_mb@2x.png") 50% 50% no-repeat;
+      background-size: contain;
+    }
+  }
+
+  @media #{$col-pads} {
+    max-width: 500px;
+  }
+
+  @media only screen and (max-width: 420px) {
+    max-width: 100vw;
+  }
+}
+
+.link-btn {
+  display: block;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  @include alpha(0);
+  transform: translateY(-30px);
+  animation: move-down 0.5s 1s forwards ease-in-out, alpha-1 0.5s 1s forwards ease-in-out;
+  z-index: 2;
+
+  .view{
+    @extend %bg-change;
+    display: block;
+  }
+
+  @media #{$col-pcxs} {
+    &:hover {
+      .view {
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
+
+.btn-1 {
+  position: absolute;
+  width: 11.22%;
+  margin-top: -22%;
+  margin-left: -9%;
+
+  .view {
+    background: url("#{$img-path}btn_1@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    padding-top: 45.685%;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: 8.973%;
+    margin-top: -22%;
+    margin-left: 28%;
+
+    .view {
+      background: url("#{$img-path}btn_1_mb@2x.png") 50% 50% no-repeat;
+      background-size: contain;
+      padding-top: 218.88888%;
+    }
+  }
+}
+
+.btn-2 {
+  position: absolute;
+  width: 14.896%;
+  margin-top: -20%;
+  margin-left: 9%;
+
+  .view {
+    background: url("#{$img-path}btn_2@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    padding-top: 34.6%;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: 9%;
+    margin-top: 11%;
+    margin-left: 25%;
+
+    .view {
+      background: url("#{$img-path}btn_2_mb@2x.png") 50% 50% no-repeat;
+      background-size: contain;
+      padding-top: 288.95%;
+    }
+  }
+}
+
+.btn-3 {
+  position: absolute;
+  width: 14.867559%;
+  margin-top: -26%;
+  margin-left: 29%;
+
+  .view {
+    background: url("#{$img-path}btn_3@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    padding-top: 34.674%;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: 9%;
+    margin-top: 45%;
+    margin-left: 33%;
+
+    .view {
+      background: url("#{$img-path}btn_3_mb@2x.png") 50% 50% no-repeat;
+      background-size: contain;
+      padding-top: 288.39779%;
+    }
+  }
+}
+
+.btn-4 {
+  position: absolute;
+  width: 14.8%;
+  margin-top: -15%;
+  margin-left: -8%;
+
+  .view {
+    background: url("#{$img-path}btn_4@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    padding-top: 34.8%;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: 9%;
+    margin-top: -20%;
+    margin-left: 16%;
+
+    .view {
+      background: url("#{$img-path}btn_4_mb@2x.png") 50% 50% no-repeat;
+      background-size: contain;
+      padding-top: 287.292818%;
+    }
+  }
+}
+
+.btn-5 {
+  position: absolute;
+  width: 14.867559%;
+  margin-top: -10%;
+  margin-left: -19%;
+
+  .view {
+    background: url("#{$img-path}btn_5@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    padding-top: 34.674%;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: 9%;
+    margin-top: -41%;
+    margin-left: 7%;
+
+    .view {
+      background: url("#{$img-path}btn_5_mb@2x.png") 50% 50% no-repeat;
+      background-size: contain;
+      padding-top: 288.39779%;
+    }
+  }
+}
+
+.btn-6 {
+  position: absolute;
+  width: 16.32%;
+  margin-top: -6%;
+  margin-left: -35.5%;
+
+  .view {
+    background: url("#{$img-path}btn_6@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    padding-top: 31.588%;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: 9%;
+    margin-top: -66%;
+    margin-left: -1.5%;
+
+    .view {
+      background: url("#{$img-path}btn_6_mb@2x.png") 50% 50% no-repeat;
+      background-size: contain;
+      padding-top: 316.574586%;
+    }
+  }
+}
+
+.btn-7 {
+  position: absolute;
+  width: 14.896%;
+  margin-top: 4%;
+  margin-left: -26%;
+
+  .view {
+    background: url("#{$img-path}btn_7@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    padding-top: 34.6%;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: 8.973%;
+    margin-top: -49%;
+    margin-left: -18%;
+
+    .view {
+      background: url("#{$img-path}btn_7_mb@2x.png") 50% 50% no-repeat;
+      background-size: contain;
+      padding-top: 290.5555%;
+    }
+  }
+}
+
+.btn-8 {
+  position: absolute;
+  width: 11.19%;
+  margin-top: -1%;
+  margin-left: 7%;
+
+  .view {
+    background: url("#{$img-path}btn_8@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    padding-top: 45.8%;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: 8.973%;
+    margin-top: 4%;
+    margin-left: -11%;
+
+    .view {
+      background: url("#{$img-path}btn_8_mb@2x.png") 50% 50% no-repeat;
+      background-size: contain;
+      padding-top: 218.3333%;
+    }
+  }
+}
+
+.btn-9 {
+  position: absolute;
+  width: 13.13%;
+  margin-top: -3%;
+  margin-left: 24%;
+
+  .view {
+    background: url("#{$img-path}btn_9@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    padding-top: 39%;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: 8.973%;
+    margin-top: 36%;
+    margin-left: -7%;
+
+    .view {
+      background: url("#{$img-path}btn_9_mb@2x.png") 50% 50% no-repeat;
+      background-size: contain;
+      padding-top: 256.1111%;
+    }
+  }
+}
+
+.btn-10 {
+  position: absolute;
+  width: 14.867559%;
+  margin-top: 11.5%;
+  margin-left: -36.5%;
+
+  .view {
+    background: url("#{$img-path}btn_10@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    padding-top: 34.674%;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: 8.973%;
+    margin-top: -70.5%;
+    margin-left: -30.5%;
+
+    .view {
+      background: url("#{$img-path}btn_10_mb@2x.png") 50% 50% no-repeat;
+      background-size: contain;
+      padding-top: 290%;
+    }
+  }
+}
+
+.btn-11 {
+  position: absolute;
+  width: 13.1586%;
+  margin-top: 11.5%;
+  margin-left: -14%;
+
+  .view {
+    background: url("#{$img-path}btn_11@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    padding-top: 38.96%;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: 8.973%;
+    margin-top: -28.5%;
+    margin-left: -32%;
+
+    .view {
+      background: url("#{$img-path}btn_11_mb@2x.png") 50% 50% no-repeat;
+      background-size: contain;
+      padding-top: 256.6666%;
+    }
+  }
+}

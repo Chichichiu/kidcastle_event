@@ -1,0 +1,553 @@
+.island-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url("#{$img-path}sea_bg@2x.jpg") 50% 50% no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+
+  @media screen and (orientation: portrait) {
+    background: url("#{$img-path}sea_bg_mb@2x.jpg") 50% 50% no-repeat;
+    background-size: cover;
+  }
+}
+
+.island-logo {
+  position: absolute;
+  background: url("#{$img-path}en_logo@2x.png") 50% 50% no-repeat;
+  background-size: contain;
+  z-index: 2;
+  @include alpha(0);
+  transform: translateY(-30px);
+  animation: move-down 0.5s 0.5s forwards ease-in-out, alpha-1 0.5s 0.5s forwards ease-in-out;
+
+  .view {
+    display: block;
+    padding-top: 23.9%;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: 7.68%;
+    background: url("#{$img-path}en_logo_mb@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    top: 10px;
+    right: 10px;
+
+    .view {
+      padding-top: 415.97%;
+    }
+  }
+
+  @media screen and (orientation: landscape) {
+    top: 30px;
+    left: 30px;
+    max-width: 367px;
+    width: 19.16666%;
+  }
+}
+
+.cloud-top {
+  position: absolute;
+  background: url("#{$img-path}cloud_top@4x.png") 50% bottom no-repeat;
+  background-size: 100% auto;
+  z-index: 1;
+
+  @media screen and (orientation: portrait) {
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: url("#{$img-path}cloud_top_mb@4x.png") 0 0 no-repeat;
+    background-size: cover;
+
+    .view {
+      width: calc(100vh / 6.33);
+    }
+  }
+
+  @media screen and (orientation: landscape) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 15.79%;
+  }
+}
+
+.cloud-bt {
+  position: absolute;
+  background: url("#{$img-path}cloud_bt@4x.png") 50% 0 no-repeat;
+  background-size: 100% auto;
+  z-index: 3;
+
+  @media screen and (orientation: portrait) {
+    height: 100vh;
+    background: url("#{$img-path}cloud_bt_mb@4x.png") right 0 no-repeat;
+    background-size: cover;
+
+    .view {
+      width: calc(100vh / 7.9);
+    }
+  }
+
+  @media screen and (orientation: landscape) {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 12.63%;
+  }
+}
+
+.qrcode {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 2;
+  max-width: 165px;
+  width: 8.59%;
+  background: url("#{$img-path}qrcode@2x.png") 50% 50% no-repeat;
+  background-size: contain;
+  display: none;
+
+  .view {
+    padding-top: 123.636364%;
+  }
+
+  @media #{$col-pcxs} {
+    display: block;
+  }
+}
+
+.kid-logo {
+  position: absolute;
+  z-index: 2;
+  @include alpha(0);
+  transform: translateX(30px);
+  animation: move-left 0.5s 1s forwards ease-in-out, alpha-1 0.5s 1s forwards ease-in-out;
+
+  .view {
+    background: url("#{$img-path}kidpower@2x.png") 50% bottom no-repeat;
+    background-size: contain;
+  }
+
+  @media screen and (orientation: portrait) {
+    height: 26.729%;
+    width: 40.766vw;
+    bottom: 0;
+    left: -5%;
+
+    .view {
+      background: url("#{$img-path}kidpower_mb@2x.png") left top no-repeat;
+      background-size: contain;
+      width: 155%;
+      height: 150%;
+    }
+  }
+
+  @media screen and (orientation: landscape) {
+    right: 30px;
+    bottom: 0;
+    max-width: 596px;
+    max-height: 650px;
+    width: 30.729%;
+    height: 52.766vh;
+
+    .view {
+      position: absolute;
+      right: -30%;
+      bottom: -19%;
+      height: 168.84%;
+      width: 149.15%;
+    }
+  }
+}
+
+.island-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 72.135vw;
+  width: calc(100vh / 0.83);
+  height: 100vh;
+  background: url("#{$img-path}island@2x.png") 50% 50% no-repeat;
+  background-size: contain;
+  z-index: 1;
+  @include alpha(0);
+  animation: alpha-1 0.5s 1.3s forwards ease-in-out;
+
+  >.view {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url("#{$img-path}island_item@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    @include alpha(0);
+    transform: translateY(30px);
+    animation: move-up 0.5s 1.5s forwards ease-in-out, alpha-1 0.5s 1.5s forwards ease-in-out;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: calc(100vh / 1.2);
+    background: url("#{$img-path}island_mb@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+
+    >.view {
+      background: url("#{$img-path}island_item_mb@2x.png") 50% 50% no-repeat;
+      background-size: contain;
+    }
+  }
+
+  @media #{$col-pads} {
+    max-width: 500px;
+  }
+
+  @media only screen and (max-width: 499px) {
+    max-width: 90vw;
+  }
+}
+
+.btn-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 72.135vw;
+  width: calc(100vh / 0.83);
+  height: 100vh;
+  z-index: 3;
+  @include alpha(0);
+  animation: alpha-1 0.5s 1.7s forwards ease-in-out;
+
+  >.view {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: calc(100vh / 1.2);
+  }
+
+  @media #{$col-pads} {
+    max-width: 500px;
+  }
+
+  @media only screen and (max-width: 499px) {
+    max-width: 90vw;
+  }
+}
+
+.island-btn {
+  display: block;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+
+  span {
+    display: block;
+  }
+}
+
+.island-btn-1 {
+  position: absolute;
+  width: 23.87%;
+  background: url("#{$img-path}kid_btn_1@2x.png") 50% 50% no-repeat;
+  background-size: contain;
+  margin-top: -28%;
+  margin-left: -44%;
+
+  .view {
+    padding-top: 26.867749%;
+  }
+
+  @media screen and (orientation: portrait) {
+    background: url("#{$img-path}kid_btn_1_mb@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    width: 11.1%;
+    margin-top: -62%;
+    margin-left: 28%;
+
+    .view {
+      padding-top: 317.378498%;
+    }
+  }
+}
+
+.island-btn-2 {
+  position: absolute;
+  width: 15.9%;
+  background: url("#{$img-path}kid_btn_2@2x.png") 50% 50% no-repeat;
+  background-size: contain;
+  margin-top: -33%;
+  margin-left: -7%;
+
+  .view {
+    padding-top: 40.296736%;
+  }
+
+  @media screen and (orientation: portrait) {
+    background: url("#{$img-path}kid_btn_2_mb@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    width: 11.1%;
+    margin-top: -11%;
+    margin-left: 33%;
+
+    .view {
+      padding-top: 248.159%;
+    }
+  }
+}
+
+.island-btn-3 {
+  position: absolute;
+  width: 17.26%;
+  background: url("#{$img-path}kid_btn_3@2x.png") 50% 50% no-repeat;
+  background-size: contain;
+  margin-top: -30%;
+  margin-left: 30%;
+
+  .view {
+    padding-top: 37.124112%;
+  }
+
+  @media screen and (orientation: portrait) {
+    background: url("#{$img-path}kid_btn_3_mb@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    width: 11.1%;
+    margin-top: 36%;
+    margin-left: 31%;
+
+    .view {
+      padding-top: 269.366716%;
+    }
+  }
+}
+
+.island-btn-4 {
+  position: absolute;
+  width: 17.25%;
+  background: url("#{$img-path}kid_btn_4@2x.png") 50% 50% no-repeat;
+  background-size: contain;
+  margin-top: -17%;
+  margin-left: -17%;
+
+  .view {
+    padding-top: 37.1444%;
+  }
+
+  @media screen and (orientation: portrait) {
+    background: url("#{$img-path}kid_btn_4_mb@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    width: 11.1%;
+    margin-top: -31%;
+    margin-left: 13%;
+
+    .view {
+      padding-top: 269.21944%;
+    }
+  }
+}
+
+.island-btn-5 {
+  position: absolute;
+  width: 20.4%;
+  background: url("#{$img-path}kid_btn_5@2x.png") 50% 50% no-repeat;
+  background-size: contain;
+  margin-top: -21%;
+  margin-left: 45%;
+
+  .view {
+    padding-top: 31.5%;
+  }
+
+  @media screen and (orientation: portrait) {
+    background: url("#{$img-path}kid_btn_5_mb@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    width: 11.1%;
+    margin-top: 53%;
+    margin-left: 17%;
+
+    .view {
+      padding-top: 317.378498%;
+    }
+  }
+}
+
+.island-btn-6 {
+  position: absolute;
+  width: 17.26%;
+  background: url("#{$img-path}kid_btn_6@2x.png") 50% 50% no-repeat;
+  background-size: contain;
+  margin-top: -7%;
+  margin-left: 23%;
+
+  .view {
+    padding-top: 37.124%;
+  }
+
+  @media screen and (orientation: portrait) {
+    background: url("#{$img-path}kid_btn_6_mb@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    width: 11.1%;
+    margin-top: 29%;
+    margin-left: 1%;
+
+    .view {
+      padding-top: 269.366716%;
+    }
+  }
+}
+
+.island-btn-7 {
+  position: absolute;
+  width: 17.3%;
+  background: url("#{$img-path}kid_btn_7@2x.png") 50% 50% no-repeat;
+  background-size: contain;
+  margin-top: 5%;
+  margin-left: -24%;
+
+  .view {
+    padding-top: 37.069%;
+  }
+
+  @media screen and (orientation: portrait) {
+    background: url("#{$img-path}kid_btn_7_mb@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    width: 11%;
+    margin-top: -37%;
+    margin-left: -14%;
+
+    .view {
+      padding-top: 269.764%;
+    }
+  }
+}
+
+.island-btn-8 {
+  position: absolute;
+  width: 17.25%;
+  background: url("#{$img-path}kid_btn_8@2x.png") 50% 50% no-repeat;
+  background-size: contain;
+  margin-top: 27%;
+  margin-left: -45%;
+
+  .view {
+    padding-top: 37.1444%;
+  }
+
+  @media screen and (orientation: portrait) {
+    background: url("#{$img-path}kid_btn_8_mb@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    width: 11.1%;
+    margin-top: -61%;
+    margin-left: -41%;
+
+    .view {
+      padding-top: 269.21944%;
+    }
+  }
+}
+
+.balloon {
+  position: absolute;
+  max-width: 137px;
+  width: 6.6%;
+  top: 50%;
+  left: 50%;
+  background: url("#{$img-path}balloon@2x.png") 50% 50% no-repeat;
+  background-size: contain;
+  margin: -17% 0 0 -45%;
+
+  .view {
+    padding-top: 224.972%;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: 32.142%;
+    background: url("#{$img-path}balloon_mb@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    margin: -89% 0 0 7%;
+
+    .view {
+      padding-top: 44.44%;
+    }
+  }
+}
+
+.boat-left {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 129px;
+  width: 6.7%;
+  background: url("#{$img-path}boat-left@2x.png") 50% 50% no-repeat;
+  background-size: contain;
+  margin: 5% 0 0 -44%;
+
+  .view {
+    padding-top: 89.9%;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: 12.24%;
+    background: url("#{$img-path}boat-left_mb@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    margin: -87% 0 0 -21%;
+
+    .view {
+      padding-top: 110.54%;
+    }
+  }
+}
+
+.boat-bt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 209px;
+  width: 10.885417%;
+  background: url("#{$img-path}boat-bt@2x.png") 50% 50% no-repeat;
+  background-size: contain;
+  margin: 14% 0 0 4%;
+
+  .view {
+    padding-top: 90.43%;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: 19.68%;
+    background: url("#{$img-path}boat-bt_mb@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    margin: 14% 0 0 -49%;
+
+    .view {
+      padding-top: 110.73%;
+    }
+  }
+}
+
+.boat-right {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 129px;
+  width: 6.7%;
+  background: url("#{$img-path}boat-right@2x.png") 50% 50% no-repeat;
+  background-size: contain;
+  margin: -8% 0 0 37%;
+
+  .view {
+    padding-top: 89.9%;
+  }
+
+  @media screen and (orientation: portrait) {
+    width: 12.24%;
+    background: url("#{$img-path}boat-right_mb@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+    margin: 70% 0 0 -7%;
+
+    .view {
+      padding-top: 110.54%;
+    }
+  }
+}
