@@ -19,8 +19,7 @@
   background-size: contain;
   z-index: 2;
   @include alpha(0);
-  transform: translateY(-30px);
-  animation: move-down 0.5s 0.5s forwards ease-in-out, alpha-1 0.5s 0.5s forwards ease-in-out;
+
 
   .view {
     display: block;
@@ -33,6 +32,8 @@
     background-size: contain;
     top: 10px;
     right: 10px;
+    transform: translateX(-30px);
+    animation: move-right 0.5s 0.5s forwards ease-in-out, alpha-1 0.5s 0.5s forwards ease-in-out;
 
     .view {
       padding-top: 415.97%;
@@ -44,6 +45,8 @@
     left: 30px;
     max-width: 367px;
     width: 19.16666%;
+    transform: translateY(-30px);
+    animation: move-down 0.5s 0.5s forwards ease-in-out, alpha-1 0.5s 0.5s forwards ease-in-out;
   }
 }
 
@@ -182,8 +185,7 @@
     background: url("#{$img-path}island_item@2x.png") 50% 50% no-repeat;
     background-size: contain;
     @include alpha(0);
-    transform: translateY(30px);
-    animation: move-up 0.5s 1.5s forwards ease-in-out, alpha-1 0.5s 1.5s forwards ease-in-out;
+
   }
 
   @media screen and (orientation: portrait) {
@@ -194,6 +196,15 @@
     >.view {
       background: url("#{$img-path}island_item_mb@2x.png") 50% 50% no-repeat;
       background-size: contain;
+      transform: translateX(-30px);
+      animation: move-right 0.5s 1.5s forwards ease-in-out, alpha-1 0.5s 1.5s forwards ease-in-out;
+    }
+  }
+
+  @media screen and (orientation: landscape) {
+    .view {
+      transform: translateY(30px);
+      animation: move-up 0.5s 1.5s forwards ease-in-out, alpha-1 0.5s 1.5s forwards ease-in-out;
     }
   }
 

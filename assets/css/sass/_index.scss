@@ -27,8 +27,6 @@
   background-size: contain;
   z-index: 5;
   @include alpha(0);
-  transform: translateY(-30px);
-  animation: move-down 0.5s forwards ease-in-out, alpha-1 0.5s forwards ease-in-out;
 
   .view {
     display: block;
@@ -42,10 +40,17 @@
     width: 8.973%;
     background: url("#{$img-path}logo_mb@2x.png") 50% 50% no-repeat;
     background-size: contain;
+    transform: translateX(30px);
+    animation: move-left 0.5s 1s forwards ease-in-out, alpha-1 0.5s 1s forwards ease-in-out;
 
     .view {
       padding-top: 413.8888%;
     }
+  }
+
+  @media screen and (orientation: landscape) {
+    transform: translateY(-30px);
+    animation: move-down 0.5s forwards ease-in-out, alpha-1 0.5s forwards ease-in-out;
   }
 }
 
@@ -57,8 +62,6 @@
   background: url("#{$img-path}map_logo@2x.png") 50% 50% no-repeat;
   background-size: contain;
   @include alpha(0);
-  transform: translateY(30px);
-  animation: move-up 0.5s forwards ease-in-out, alpha-1 0.5s forwards ease-in-out;
   z-index: 1;
 
   .view {
@@ -73,10 +76,17 @@
     width: 28%;
     background: url("#{$img-path}map_logo_mb@2x.png") 50% 50% no-repeat;
     background-size: contain;
+    transform: translateX(-30px);
+    animation: move-right 0.5s 1s forwards ease-in-out, alpha-1 0.5s 1s forwards ease-in-out;
 
     .view {
       padding-top: 171%;
     }
+  }
+
+  @media screen and (orientation: landscape) {
+    transform: translateY(30px);
+    animation: move-up 0.5s forwards ease-in-out, alpha-1 0.5s forwards ease-in-out;
   }
 }
 
@@ -91,7 +101,7 @@
   left: 50%;
   transform: translate(-50%,-50%);
   @include alpha(0);
-  animation: alpha-1 0.5s 0.7s forwards ease-in-out;
+  animation: alpha-1 0.5s forwards ease-in-out;
 
   >.view {
     background: url("#{$img-path}building@2x.png") 50% 50% no-repeat;
@@ -100,8 +110,6 @@
     height: 100%;
     position: relative;
     @include alpha(0);
-    transform: translateY(30px);
-    animation: move-up 0.5s 1s forwards ease-in-out, alpha-1 0.5s 1s forwards ease-in-out;
   }
 
   @media screen and (orientation: portrait) {
@@ -110,8 +118,17 @@
     background-size: contain;
 
     >.view {
+      transform: translateX(-30px);
+      animation: move-right 0.5s 0.5s forwards ease-in-out, alpha-1 0.5s 0.5s forwards ease-in-out;
       background: url("#{$img-path}building_mb@2x.png") 50% 50% no-repeat;
       background-size: contain;
+    }
+  }
+
+  @media screen and (orientation: landscape) {
+    >.view {
+      transform: translateY(30px);
+      animation: move-up 0.5s 1s forwards ease-in-out, alpha-1 0.5s 1s forwards ease-in-out;
     }
   }
 
@@ -130,9 +147,7 @@
   left: 50%;
   z-index: 2;
   @include alpha(0);
-  transform: translateY(-30px);
-  animation: move-down 0.5s 1s forwards ease-in-out, alpha-1 0.5s 1s forwards ease-in-out;
-  z-index: 2;
+
 
   .view{
     @extend %bg-change;
@@ -145,6 +160,16 @@
         transform: translateY(-5px);
       }
     }
+  }
+
+  @media screen and (orientation: portrait) {
+    transform: translateX(-30px);
+    animation: move-right 0.5s 1s forwards ease-in-out, alpha-1 0.5s 1s forwards ease-in-out;
+  }
+
+  @media screen and (orientation: landscape) {
+    transform: translateY(-30px);
+    animation: move-down 0.5s 1s forwards ease-in-out, alpha-1 0.5s 1s forwards ease-in-out;
   }
 }
 

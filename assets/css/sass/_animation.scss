@@ -37,3 +37,13 @@
         transform: translateX(0);
     }
 }
+
+@keyframes move-right{
+    0% {
+        transform: translateX(-30px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
